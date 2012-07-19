@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/addPersonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addPerson"
+            android:text="@string/button_addPerson" />
+
+        <Button
+            android:id="@+id/removePersonButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="removePerson"
+            android:text="@string/button_removePerson" />
+    </TableRow>
+
+    <TableRow>
+
+        <EditText
+            android:id="@+id/group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/editGrpNameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="editGrpName"
+            android:text="@string/button_editGrpName" />
+    </TableRow>
+
+    <TableRow>
+
+        <Button
+            android:id="@+id/FLUSHITButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="FLUSHIT"
+            android:text="@string/button_FLUSHIT" />
+    </TableRow>
+    
+    <TableRow>
+        <GridView
+            android:id="@+id/gridViewContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnWidth="100dp"
+            android:gravity="center"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth" />
+    </TableRow>
+        
+    
+
+</TableLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Yo bruh!</string>
+    <string name="app_name">Bill it</string>
+    <string name="sample_email">someone@something.com</string>
+    <string name="save">SAVE</string>
+	
+	<string name="label_email">Enter the email address</string>
+	<string name="label_name">Name</string>
+	<string name="label_amount">Amount</string>
+	<string name="label_description">Description</string>
+	<string name="label_grpName">Group Name</string>
+	<string name="label_editMessage">Edit message</string>
+	
+	<string name="button_bill">BILL</string>
+	<string name="button_editGrp">Edit group</string>
+	<string name="button_addGrp">Add Group</string>
+	<string name="button_addPerson">Add contact</string>
+	<string name="button_removePerson">Remove contact</string>
+	<string name="button_editGrpName">Edit Group Name</string>
+	<string name="button_FLUSHIT">FLUSH IT</string>
+	
+</resources>
