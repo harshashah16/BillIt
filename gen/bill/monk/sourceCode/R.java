@@ -8,24 +8,27 @@
 package bill.monk.sourceCode;
 
 public final class R {
+    public static final class array {
+        public static final int menuItems=0x7f040000;
+    }
     public static final class attr {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int FLUSHITButton=0x7f050008;
-        public static final int addPersonButton=0x7f050005;
-        public static final int add_group=0x7f05000a;
-        public static final int contactSaveButton=0x7f050002;
-        public static final int contact_name=0x7f050001;
-        public static final int editGrpNameButton=0x7f050007;
-        public static final int email_address=0x7f050000;
-        public static final int gridViewContact=0x7f050009;
-        public static final int gridViewGrp=0x7f05000b;
-        public static final int groupSaveButton=0x7f050004;
-        public static final int group_name=0x7f050003;
-        public static final int removePersonButton=0x7f050006;
+        public static final int FLUSHITButton=0x7f060008;
+        public static final int addPersonButton=0x7f060005;
+        public static final int add_group=0x7f06000a;
+        public static final int contactSaveButton=0x7f060002;
+        public static final int contact_name=0x7f060001;
+        public static final int editGrpNameButton=0x7f060007;
+        public static final int email_address=0x7f060000;
+        public static final int gridViewContact=0x7f060009;
+        public static final int gridViewGrp=0x7f06000b;
+        public static final int groupSaveButton=0x7f060004;
+        public static final int group_name=0x7f060003;
+        public static final int removePersonButton=0x7f060006;
     }
     public static final class layout {
         public static final int contact_add=0x7f030000;
@@ -34,22 +37,22 @@ public final class R {
         public static final int main=0x7f030003;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int button_FLUSHIT=0x7f040010;
-        public static final int button_addGrp=0x7f04000c;
-        public static final int button_addPerson=0x7f04000d;
-        public static final int button_bill=0x7f04000a;
-        public static final int button_editGrp=0x7f04000b;
-        public static final int button_editGrpName=0x7f04000f;
-        public static final int button_removePerson=0x7f04000e;
-        public static final int hello=0x7f040000;
-        public static final int label_amount=0x7f040006;
-        public static final int label_description=0x7f040007;
-        public static final int label_editMessage=0x7f040009;
-        public static final int label_email=0x7f040004;
-        public static final int label_grpName=0x7f040008;
-        public static final int label_name=0x7f040005;
-        public static final int sample_email=0x7f040002;
-        public static final int save=0x7f040003;
+        public static final int app_name=0x7f050001;
+        public static final int button_FLUSHIT=0x7f050010;
+        public static final int button_addGrp=0x7f05000c;
+        public static final int button_addPerson=0x7f05000d;
+        public static final int button_bill=0x7f05000a;
+        public static final int button_editGrp=0x7f05000b;
+        public static final int button_editGrpName=0x7f05000f;
+        public static final int button_removePerson=0x7f05000e;
+        public static final int hello=0x7f050000;
+        public static final int label_amount=0x7f050006;
+        public static final int label_description=0x7f050007;
+        public static final int label_editMessage=0x7f050009;
+        public static final int label_email=0x7f050004;
+        public static final int label_grpName=0x7f050008;
+        public static final int label_name=0x7f050005;
+        public static final int sample_email=0x7f050002;
+        public static final int save=0x7f050003;
     }
 }

@@ -1,5 +1,6 @@
 package bill.monk.db;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class databaseConnection {
 		long id = group.get_id();
 		ContentValues values = new ContentValues();
 		values.put(Groups.Groups_name, group.get_name());
-		System.out.println("Groups deleted with id: " + id);
+		System.out.println("Group's name updated with id: " + id);
 		return (database.update(Groups.TABLE_NAME, values, Groups.Groups_id + " = "+ Long.toString(group.get_id()),null));
 	}
 	

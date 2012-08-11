@@ -1,5 +1,7 @@
 package bill.monk.db;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 @SuppressWarnings("serial") 
 public class Groups implements Serializable {
@@ -30,6 +32,22 @@ public class Groups implements Serializable {
 	@Override
 	public String toString() {
 		return _name;
+	}
+	
+	public static boolean findGroupNameInList(ArrayList<Groups> groupListIn, String groupName) {
+		Iterator<Groups> iter = (Iterator<Groups>) groupListIn.iterator();
+		boolean returnVal = false;
+		Groups group;
+		while (iter.hasNext()) {
+			group = iter.next();
+			if (group.get_name().equalsIgnoreCase(groupName))
+			{
+				returnVal = true;
+				break;
+			}
+			
+		}
+		return returnVal;
 	}
 	
 }

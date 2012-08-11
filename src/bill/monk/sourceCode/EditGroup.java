@@ -1,6 +1,7 @@
 package bill.monk.sourceCode;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.regex.Pattern;
 
 import bill.monk.db.Contacts;
@@ -41,6 +42,17 @@ public class EditGroup extends Activity {
 		mainFrame = classInteraction.getMainFrame();
 		Intent i =  getIntent();
 		group = (Groups) i.getSerializableExtra(mainFrame.MESSAGE);
+		
+		// Get the group class from groupList.
+		Iterator<Groups> iter = mainFrame.groupList.iterator();
+		Groups groupIter;
+		while(iter.hasNext()) {
+			groupIter = iter.next();
+			if (groupIter.get_id() == group.get_id()) {
+				group = groupIter;
+				break;
+			}
+		}
 		contactList = new ArrayList<Contacts>();
 		
 		this.editGroupNameButton = (Button) findViewById(R.id.editGrpNameButton);
@@ -73,14 +85,19 @@ public class EditGroup extends Activity {
 				// TODO: Edit the groupName.
 				
 				String groupName =group_name.getText().toString();
+				
+				// No change in the name.
+				if (groupName.equalsIgnoreCase(group.get_name())) {
+					return;
+				}
+				
 				// Duplicate group.
-				if (mainFrame.groupList.contains(groupName)) {
+				if (Groups.findGroupNameInList(mainFrame.groupList,groupName)) {
 					Toast.makeText(getApplicationContext(),
 		    				   "Group already exist.",
 		    				   Toast.LENGTH_LONG).show();
 					return;
 				}
-				
 				// Check for group length.
 				if (groupName.length() > 10 ) {
 					Toast.makeText(getApplicationContext(),
@@ -97,12 +114,13 @@ public class EditGroup extends Activity {
 		    				   Toast.LENGTH_LONG).show();
 					return;
 				}
+				
+				
 				if(mainFrame.datasource.editGroupName(group) > 0) {
 					group.set_name(groupName);
+					mainFrame.editGroupName(group);
 				}
-				/*  Qurery to edit group name.
-					Check if we need to update the adapter.
-				*/
+
 			}
 		});
 
